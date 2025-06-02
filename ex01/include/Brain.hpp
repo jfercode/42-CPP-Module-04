@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:53:12 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:38:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 18:18:13 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:25:53 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cat.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-Cat::Cat()
-{
-    std::cout << "Cat constructor called" << std::endl;
-    type = "Cat";
-}
+# include <iostream>
 
-Cat::~Cat()
+class Brain
 {
-    std::cout << "Cat destructor called" << std::endl;
-}
+  private:
+	std::string ideas[100];
 
-void    Cat::makeSound() const
-{
-    std::cout << "[" << type << "] Meaow meaow!" << std::endl;
-}
+  public:
+	Brain();
+	~Brain();
+};
+
+#endif

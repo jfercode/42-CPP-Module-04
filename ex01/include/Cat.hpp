@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:53:12 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:38:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:49:34 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:27:23 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cat.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-Cat::Cat()
-{
-    std::cout << "Cat constructor called" << std::endl;
-    type = "Cat";
-}
+# include <iostream>
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-Cat::~Cat()
+class Cat : public Animal
 {
-    std::cout << "Cat destructor called" << std::endl;
-}
+  private:
+	Brain *brain;
+  public:
+	Cat();
+	~Cat();
+	void makeSound() const;
+};
 
-void    Cat::makeSound() const
-{
-    std::cout << "[" << type << "] Meaow meaow!" << std::endl;
-}
+#endif

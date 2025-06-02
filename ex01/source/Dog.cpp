@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:53:12 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:38:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:37:54 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:36:42 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cat.hpp"
+#include "../include/Dog.hpp"
 
-Cat::Cat()
+Dog::Dog()
 {
-    std::cout << "Cat constructor called" << std::endl;
-    type = "Cat";
+    std::cout << "Dog constructor called" << std::endl;
+    type = "Dog";
+    brain = new Brain();
 }
 
-Cat::~Cat()
+Dog::~Dog()
 {
-    std::cout << "Cat destructor called" << std::endl;
+    delete brain;
+    std::cout << "Dog destructor called" << std::endl;
 }
 
-void    Cat::makeSound() const
+void    Dog::makeSound() const
 {
-    std::cout << "[" << type << "] Meaow meaow!" << std::endl;
+    std::cout << "[" << type << "] Woof woof!" << std::endl;
 }
+

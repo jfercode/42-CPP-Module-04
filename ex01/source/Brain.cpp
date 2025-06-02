@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:53:12 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:38:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 18:22:56 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:31:53 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cat.hpp"
+#include "../include/Brain.hpp"
 
-Cat::Cat()
+Brain::Brain()
 {
-    std::cout << "Cat constructor called" << std::endl;
-    type = "Cat";
+    std::cout << "Brain constructor called" << std::endl;
 }
 
-Cat::~Cat()
+Brain::~Brain()
 {
-    std::cout << "Cat destructor called" << std::endl;
-}
-
-void    Cat::makeSound() const
-{
-    std::cout << "[" << type << "] Meaow meaow!" << std::endl;
+    std::cout << "Brain destructor called" << std::endl;
 }
