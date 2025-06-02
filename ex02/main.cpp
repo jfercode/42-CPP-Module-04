@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:25:14 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:41:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:31:09 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:42:58 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "include/Animal.hpp"
+#include "include/Cat.hpp"
+#include "include/Dog.hpp"
+#include <iostream>
 
-# include <iostream>
-
-class Animal
+int	main(void)
 {
-  private:
-	/**/
-  protected:
-	std::string type;
-  public:
-	Animal();
-	virtual ~Animal();
-	virtual void makeSound() const;
-	std::string getType() const;
-};
+	const Animal	*j = new Dog();
+	const Animal	*i = new Cat();
 
-#endif
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	delete i;
+	delete j;
+	return (0);
+}

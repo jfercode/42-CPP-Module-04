@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:25:14 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:41:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:53:12 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:36:44 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "../include/Cat.hpp"
 
-# include <iostream>
-
-class Animal
+Cat::Cat()
 {
-  private:
-	/**/
-  protected:
-	std::string type;
-  public:
-	Animal();
-	virtual ~Animal();
-	virtual void makeSound() const;
-	std::string getType() const;
-};
+    std::cout << "Cat constructor called" << std::endl;
+    type = "Cat";
+    brain = new Brain();
+}
 
-#endif
+Cat::~Cat()
+{
+    delete brain;
+    std::cout << "Cat destructor called" << std::endl;
+}
+
+void    Cat::makeSound() const
+{
+    std::cout << "[" << type << "] Meaow meaow!" << std::endl;
+
+}

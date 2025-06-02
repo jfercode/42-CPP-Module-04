@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:25:14 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:41:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:37:54 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:36:42 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "../include/Dog.hpp"
 
-# include <iostream>
-
-class Animal
+Dog::Dog()
 {
-  private:
-	/**/
-  protected:
-	std::string type;
-  public:
-	Animal();
-	virtual ~Animal();
-	virtual void makeSound() const;
-	std::string getType() const;
-};
+    std::cout << "Dog constructor called" << std::endl;
+    type = "Dog";
+    brain = new Brain();
+}
 
-#endif
+Dog::~Dog()
+{
+    delete brain;
+    std::cout << "Dog destructor called" << std::endl;
+}
+
+void    Dog::makeSound() const
+{
+    std::cout << "[" << type << "] Woof woof!" << std::endl;
+}
+

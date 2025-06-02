@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:25:14 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:41:58 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/02 17:28:16 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/02 18:15:27 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "../include/Animal.hpp"
 
-# include <iostream>
-
-class Animal
+Animal::Animal() : type("Animal")
 {
-  private:
-	/**/
-  protected:
-	std::string type;
-  public:
-	Animal();
-	virtual ~Animal();
-	virtual void makeSound() const;
-	std::string getType() const;
-};
+	std::cout << "Animal constructor called" << std::endl;
+}
 
-#endif
+Animal::~Animal()
+{
+	std::cout << "Animal destructor called" << std::endl;
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "[" << type << "] makes some noise!" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return (type);
+}
