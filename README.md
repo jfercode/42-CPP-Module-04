@@ -1,4 +1,4 @@
-# 🎭 CPP Module 04 – Interfaces, Polimorfismo Avanzado y Rule of Three
+# 🎭 CPP Module 04 – Interfaces, Polimorfismo Avanzado y Regla de tres
 
 > ✅ Objetivo: Dominar las **clases abstractas puras**, el **polimorfismo real**, la **gestión de recursos** y los **patrones de diseño** como **Factory Method**.
 > ✅ Nivel: Avanzado
