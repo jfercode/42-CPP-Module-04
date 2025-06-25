@@ -6,25 +6,41 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:31:09 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:15:14 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 12:25:46 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Animal.hpp"
+#include "include/WrongAnimal.hpp"
 #include "include/Cat.hpp"
+#include "include/WrongCat.hpp"
 #include "include/Dog.hpp"
-#include <iostream>
 
 int	main(void)
 {
-	const Animal	*meta = new Animal();
-	const Animal	*j = new Dog();
-	const Animal	*i = new Cat();
+	{
+		const Animal	*meta = new Animal();
+		const Animal	*j = new Dog();
+		const Animal	*i = new Cat();
+	
+		std::cout << j->getType() << " " << std::endl;
+		std::cout << i->getType() << " " << std::endl;
+		i->makeSound();
+		j->makeSound();
+		meta->makeSound();
+	}
+	std::cout << "=== CAT (correcta con virtual) ===" << std::endl;
+	{
+		const Animal* i = new Cat();
+		std::cout << i->getType() << std::endl;
+		i->makeSound();
+	}
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+	std::cout << "\n=== WRONGCAT (sin virtual) ===" << std::endl;
+	{
+		const WrongAnimal* i = new WrongCat();
+		std::cout << i->getType() << std::endl;
+		i->makeSound();
+	}
 	return (0);
 }

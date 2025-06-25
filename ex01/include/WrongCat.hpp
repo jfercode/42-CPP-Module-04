@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:28:16 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/02 18:15:27 by jaferna2         ###   ########.fr       */
+/*   Created: 2025/06/25 12:17:03 by jaferna2          #+#    #+#             */
+/*   Updated: 2025/06/25 12:26:07 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Animal.hpp"
 
-Animal::Animal() : type("Animal")
-{
-	std::cout << "Animal constructor called" << std::endl;
-}
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Animal::~Animal()
-{
-	std::cout << "Animal destructor called" << std::endl;
-}
+# include "WrongAnimal.hpp"
+# include <iostream>
 
-void Animal::makeSound() const
+class WrongCat : public WrongAnimal
 {
-	std::cout << "[" << type << "] makes some noise!" << std::endl;
-}
+  private:
+    /** */
+  public:
+	WrongCat();
+	WrongCat(const WrongCat& other);
+	WrongCat& operator=(const WrongCat& other);
+	~WrongCat();
+	void makeSound() const;
+};
 
-std::string Animal::getType() const
-{
-	return (type);
-}
+#endif

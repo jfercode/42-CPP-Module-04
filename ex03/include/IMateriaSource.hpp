@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 17:57:08 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/09 09:59:32 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/25 13:24:01 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,4 @@ class IMateriaSource
 		virtual AMateria *createMateria(std::string const & type) = 0;
 };
 
-#endif
+#endif	
