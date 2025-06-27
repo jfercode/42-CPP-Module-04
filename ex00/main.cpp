@@ -6,7 +6,7 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:31:09 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/25 12:25:46 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/27 13:17:54 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,23 @@ int	main(void)
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
+		delete meta;
+		delete j;
+		delete i;
 	}
-	std::cout << "=== CAT (correcta con virtual) ===" << std::endl;
+	std::cout << std::endl << "=== CAT ===" << std::endl;
 	{
 		const Animal* i = new Cat();
 		std::cout << i->getType() << std::endl;
 		i->makeSound();
+		delete i;
 	}
-
-	std::cout << "\n=== WRONGCAT (sin virtual) ===" << std::endl;
+	std::cout << std::endl << "=== WRONGCAT ===" << std::endl;
 	{
 		const WrongAnimal* i = new WrongCat();
 		std::cout << i->getType() << std::endl;
 		i->makeSound();
+		delete i;
 	}
 	return (0);
 }

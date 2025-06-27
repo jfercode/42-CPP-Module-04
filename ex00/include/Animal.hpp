@@ -6,7 +6,7 @@
 /*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:25:14 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/06/25 12:26:13 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/06/27 13:17:15 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal
 	Animal();
 	Animal(const Animal& copy);
 	Animal& operator=(const Animal& copy);
-	~Animal();
+	virtual ~Animal();
 	virtual void makeSound() const;
 	std::string getType() const;
 };
